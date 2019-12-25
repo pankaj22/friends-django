@@ -3,6 +3,6 @@ django-debug-toolbar==1.7
 djangorestframework==3.6.2
 psycopg2==2.7.5
 redis==2.10.6
-requests==2.18.0
+requests==2.20.0
 requests-futures==0.9.7
 simplejson==3.11.1
