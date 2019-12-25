@@ -10,7 +10,7 @@ class users(models.Model):
 
 
 class friend_relation(models.Model):
-    user_id = models.ForeignKey(users, on_delete=models.CASCADE, related_name='user_id')
-    friend_id = models.ForeignKey(users, on_delete=models.CASCADE, related_name='friend_id')
+    user = models.ForeignKey(users, on_delete=models.CASCADE, related_name='user')
+    friend = models.ForeignKey(users, on_delete=models.CASCADE, related_name='friend')
     status = models.IntegerField(default=0)
     created_at_ts = models.DateTimeField()
