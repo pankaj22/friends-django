@@ -6,3 +6,11 @@ Steps to run the project:
 5. Activate virtualenv; command: "source myproject/bin/activate"
 6. Install requirements; command: "pip install -r friends-django/requirements.txt"
 7. Run project; command: "python friends-django/app/manage.py runserver"
+
+
+DB Migrations:
+1. Run your postgresql instance and create the database and user mention in settings file of the project.
+2. Run command: "python app/manage.py makemigrations friends"; if 0001_initial file is not present in migration folder.
+3. Run command: "python app/manage.py migrate friends"; if 0001_initial file is not present in migration folder.
+4. Run command: "python app/manage.py sqlmigrate friends 0001_initial".
+
