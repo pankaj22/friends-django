@@ -75,7 +75,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
-    ]
+    ],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 
 WSGI_APPLICATION = 'app.wsgi.application'
@@ -92,6 +93,13 @@ DATABASES = {
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
+        'TEST': {
+            'NAME': 'test_mydb',
+            'USER': 'test_myapp',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        },
     }
 }
 

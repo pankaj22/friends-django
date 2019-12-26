@@ -15,6 +15,13 @@ from .controllers import *
 @csrf_exempt
 @renderer_classes([JSONRenderer])
 def index(request):
+    return Response(status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@csrf_exempt
+@renderer_classes([JSONRenderer])
+def populateData(request):
     try:
         add_users_into_db()
         add_friends_into_db()

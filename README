@@ -14,3 +14,9 @@ DB Migrations:
 3. Run command: "python app/manage.py migrate friends"; if 0001_initial file is not present in migration folder.
 4. Run command: "python app/manage.py sqlmigrate friends 0001_initial".
 
+
+APIs:
+1. "http://127.0.0.1:8000/friends/populateData" GET call to populate the dummy data.
+2. "http://127.0.0.1:8000/friends/getUsers" POST call with request payload: {}.
+3. "http://127.0.0.1:8000/friends/getFriends" POST call with request payload: {"user_id":1}
+4. "http://127.0.0.1:8000/friends/getFriendsRecommendation" POST call with request payload: {"user_id":1}
